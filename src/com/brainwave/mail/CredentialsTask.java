@@ -7,8 +7,8 @@ import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
 
-import com.brainwave.email_client.AddAccountActivity;
 import com.brainwave.mail.MailSystem.AccountType;
+import com.brainwave.main.AddAccountActivity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

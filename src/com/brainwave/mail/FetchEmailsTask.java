@@ -12,9 +12,9 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
-import com.brainwave.email_client.GmailActivity;
-import com.brainwave.email_client.MailSystemApplication;
 import com.brainwave.mail.MailSystem.AccountType;
+import com.brainwave.main.GmailActivity;
+import com.brainwave.main.MailSystemApplication;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;

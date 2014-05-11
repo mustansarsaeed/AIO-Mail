@@ -8,12 +8,12 @@ import java.util.List;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 
-import com.brainwave.email_client.AddAccountActivity;
-import com.brainwave.email_client.EmailActivity;
-import com.brainwave.email_client.GmailActivity;
-import com.brainwave.email_client.MailSystemApplication;
 import com.brainwave.mail.MailSystem.AccountType;
 import com.brainwave.mail.MailSystem.TaskType;
+import com.brainwave.main.AddAccountActivity;
+import com.brainwave.main.EmailActivity;
+import com.brainwave.main.GmailActivity;
+import com.brainwave.main.MailSystemApplication;
 import com.brainwave.utils.Utilities;
 
 import android.app.Activity;

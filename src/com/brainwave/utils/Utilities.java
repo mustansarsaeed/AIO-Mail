@@ -10,7 +10,7 @@ import javax.mail.Flags;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 
-import com.brainwave.email_client.MailSystemApplication;
+import com.brainwave.main.MailSystemApplication;
 import com.brainwave.models.MailMessage;
 
 /**

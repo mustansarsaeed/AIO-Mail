@@ -31,10 +31,10 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import com.brainwave.email_client.EmailActivity;
-import com.brainwave.email_client.GmailActivity;
-import com.brainwave.email_client.MailSystemApplication;
-import com.brainwave.email_client.MyMessage;
+import com.brainwave.main.EmailActivity;
+import com.brainwave.main.GmailActivity;
+import com.brainwave.main.MailSystemApplication;
+import com.brainwave.main.MyMessage;
 
 
 import android.util.Log;
