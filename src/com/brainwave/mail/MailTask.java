@@ -11,7 +11,7 @@ import javax.mail.MessagingException;
 import com.brainwave.mail.MailSystem.AccountType;
 import com.brainwave.mail.MailSystem.TaskType;
 import com.brainwave.main.AddAccountActivity;
-import com.brainwave.main.EmailActivity;
+import com.brainwave.main.MainEmailActivity;
 import com.brainwave.main.GmailActivity;
 import com.brainwave.main.MailSystemApplication;
 import com.brainwave.utils.Utilities;
@@ -22,6 +22,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 /**
+ * Single point to run tasks in background, credentials verification,
+ * fetching emails, sending emails etc. 
  * 
  * @author Mustansar Saeed
  *
@@ -168,7 +170,7 @@ public class MailTask extends AsyncTask {
 			case FETCH_EMAIL:
 			case REFRESH_EMAIL:
 				try {
-					((EmailActivity)callerActivity).emailsFetched(Utilities.getMailMessages((Message[])objects[0]), 
+					((MainEmailActivity)callerActivity).emailsFetched(Utilities.getMailMessages((Message[])objects[0]), 
 							objects[2].toString(), task);
 				} catch (MessagingException e) {
 					// TODO Auto-generated catch block
@@ -189,7 +191,7 @@ public class MailTask extends AsyncTask {
 				break;
 			case FETCH_LABELS:
 				try {
-					((EmailActivity)callerActivity).showLabels((ArrayList<String>)objects[0]);
+					((MainEmailActivity)callerActivity).showLabels((ArrayList<String>)objects[0]);
 				} catch (MessagingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

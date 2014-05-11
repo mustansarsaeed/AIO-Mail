@@ -14,6 +14,7 @@ import com.brainwave.main.MailSystemApplication;
 import com.brainwave.models.MailMessage;
 
 /**
+ * Generic functions/utilities
  * 
  * @author Mustansar Saeed
  *

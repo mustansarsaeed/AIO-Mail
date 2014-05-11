@@ -1,20 +1,14 @@
 package com.brainwave.mail;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-
-import javax.activation.DataHandler;
 import javax.mail.AuthenticationFailedException;
 import javax.mail.Authenticator;
-import javax.mail.BodyPart;
 import javax.mail.Flags;
 import javax.mail.Folder;
 import javax.mail.Message;
@@ -30,19 +24,12 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
-import com.brainwave.main.EmailActivity;
-import com.brainwave.main.GmailActivity;
-import com.brainwave.main.MailSystemApplication;
-import com.brainwave.main.MyMessage;
-
-
+import com.brainwave.main.MainEmailActivity;
 import android.util.Log;
-import android.widget.Toast;
-
 
 /**
- * 
+ * Single point for the mail system. Communicate with server and return the results
+ *  
  * @author Mustansar Saeed
  *
  */
@@ -154,7 +141,7 @@ public class MailSystem {
 	}
 	
 	
-	public void processMailTask(EmailActivity activity, AccountType accountType, String folder, TaskType task)
+	public void processMailTask(MainEmailActivity activity, AccountType accountType, String folder, TaskType task)
 	{
 		String username = emailsMap.get(accountType);
 		String password = passwordsMap.get(username);
@@ -163,7 +150,7 @@ public class MailSystem {
 				task);
 	}
 	
-	public void deleteMailsTask(EmailActivity activity, AccountType accountType, String folder, TaskType task,
+	public void deleteMailsTask(MainEmailActivity activity, AccountType accountType, String folder, TaskType task,
 			ArrayList<Integer> messages)
 	{
 		String username = emailsMap.get(accountType);
