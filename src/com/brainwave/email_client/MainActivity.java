@@ -34,6 +34,16 @@ public class MainActivity extends TabActivity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
+		
+		if(savedInstanceState == null)
+		{
+			accountsMap = MailSystemApplication.mailSystem.getEmailAccounts();
+		}
+		else
+		{
+			accountsMap = (EnumMap<AccountType, String>) savedInstanceState.getSerializable("accounts");
+		}
+		
 		populateAccounts(savedInstanceState);	
 
 	}
@@ -46,24 +56,24 @@ public class MainActivity extends TabActivity {
 		super.onSaveInstanceState(outState);
 	}
 	
-	@Override
-	protected void onRestoreInstanceState(Bundle state) {
-		// TODO Auto-generated method stub
-		accountsMap = (EnumMap<AccountType, String>) state.getSerializable("accounts");
-		populateAccounts(state);
-		
-		super.onRestoreInstanceState(state);
-	}
+//	@Override
+//	protected void onRestoreInstanceState(Bundle state) {
+//		// TODO Auto-generated method stub
+//		accountsMap = (EnumMap<AccountType, String>) state.getSerializable("accounts");
+//		populateAccounts(state);
+//		
+//		super.onRestoreInstanceState(state);
+//	}
 
 	public void populateAccounts (Bundle state)
 	{
 		TabHost tabHost = getTabHost();
 		AccountType defaultAccountType = null;
 		
-		if(state == null)
-		{
-			accountsMap = MailSystemApplication.mailSystem.getEmailAccounts();	
-		}
+//		if(state == null)
+//		{
+//			accountsMap = MailSystemApplication.mailSystem.getEmailAccounts();	
+//		}
 		
 		defaultAccountType = (AccountType) getIntent().getSerializableExtra("accountType");
 		
